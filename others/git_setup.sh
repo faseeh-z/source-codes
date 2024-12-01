@@ -12,6 +12,23 @@ if [ $? -ne 0 ]; then
 fi
 echo "Git installed successfully."
 
+# Install Git LFS
+echo "Installing Git LFS..."
+curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+sudo apt-get install -y git-lfs
+
+# Check Git LFS installation
+git lfs --version
+if [ $? -ne 0 ]; then
+    echo "Git LFS installation failed."
+    exit 1
+fi
+echo "Git LFS installed successfully."
+
+# Initialize Git LFS
+echo "Initializing Git LFS..."
+git lfs install
+
 # Configure Git (replace with your details)
 read -p "Enter your Git username: " git_username
 read -p "Enter your Git email: " git_email
@@ -47,4 +64,3 @@ if [ $? -eq 1 ]; then
 else
     echo "Error: Unable to connect to $git_host. Verify the SSH key is added to your account."
 fi
-
