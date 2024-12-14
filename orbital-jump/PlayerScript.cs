@@ -17,7 +17,7 @@ public class PlayerScript : MonoBehaviour
     public ParticleSystem leftPS;
     public ParticleSystem rightPS;
 
-    private bool playerIsAlive = true;
+    public bool playerIsAlive = true;
 
     // .Enable and .Disable are required for the new Input System.
     private void OnEnable()
