@@ -31,14 +31,16 @@ public class GameManager : MonoBehaviour
         gameSceneManager.ActivateLevelCompletedPanel();
     }
 
-    public void ReloadCurrentScene()
+    public void RestartLevel()
     {
+        levelCompleted = false;
         Scene currentScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(currentScene.name);
     }
 
-    public void LoadMainMenu()
+    public void GoToMainMenu()
     {
+        levelCompleted = false;
         SceneManager.LoadScene("MainMenu");
     }
 

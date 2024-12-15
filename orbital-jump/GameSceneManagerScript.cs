@@ -21,11 +21,11 @@ public class GameSceneManagerScript: MonoBehaviour
 
     public void Restart()
     {
-        GameManager.Instance.ReloadCurrentScene();
+        GameManager.Instance.RestartLevel();
     }
 
     public void GoToMainMenu()
     {
-        GameManager.Instance.LoadMainMenu();
+        GameManager.Instance.GoToMainMenu();
     }
 }
