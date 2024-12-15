@@ -11,6 +11,8 @@ public class AudioManager : MonoBehaviour
     public AudioSource sfx;
     public AudioClip thrusterClip;
     public AudioClip explosion;
+    public AudioClip button1;
+    public AudioClip button2;
 
     private int fadeDirection = 1;
 

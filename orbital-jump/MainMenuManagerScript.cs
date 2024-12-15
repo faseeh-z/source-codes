@@ -18,6 +18,16 @@ public class MainMenuManagerScript : MonoBehaviour
         titlePanel.SetActive(false);
     }
 
+    public void playButton1()
+    {
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.button1);
+    }
+
+    public void playButton2()
+    {
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.button2);
+    }
+
     // Level loading functions.
     public void LoadLv1()
     {
